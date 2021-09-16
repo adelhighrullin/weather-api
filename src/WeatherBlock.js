@@ -1,12 +1,13 @@
 import React from 'react';
+import './App.css';
 
 function WeatherBlock(props) {
   return (
     <div className="WeatherBlock">
-      <p>{props.city}, {props.country}</p>
-      <p>Temperature: {props.temp_c}&deg;C</p>
-      <p>{props.cond}</p>
-      <img src={props.icon} alt={props.condition}/>
+      <img className="Icon" src={props.icon} alt={props.cond} />
+      <div className="Condition">{props.cond}</div>
+      <div className="Temperature">{props.temp_c}&deg;C</div>
+      <div className="Location">{props.city},<br />{props.country}</div>
     </div>
   );
 }

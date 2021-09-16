@@ -1,38 +1,86 @@
+body {
+  height: 100%;
+  background: linear-gradient(to top right, #11998e, #38ef7d);
+  background-attachment: fixed;
+}
+
+body, input, button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header {
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Search {
+  margin: 4% auto auto auto;
+  text-align: center;
+  width: 60%;
+}
+
+.Search input {
+  margin-right: 1ch;
+  font-size: 2ch;
+  text-align: center;
+  border-style: none;
+  height: 50px;
+  width: 200px;
+}
+
+.Search button {
+  border-style: none;
+  font-size: 2ch;
+  height: 50px;
+  width: 100px;
+  transition-duration: 200ms;
+}
+
+.Search button:hover {
+  background-color:  	#A9A9A9;
+  transition-duration: 200ms;
+}
+
+.WeatherBlock {
+  border-radius: 2ch;
+  background: linear-gradient(to bottom left, #11998e, #38ef7d);
+  margin: 4% auto;
+  padding: 1%;
+  height: 40%;
+  width: 40%;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Icon {
+  margin: 0 auto;
+  grid-column: 1;
+  grid-row: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Condition {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.Temperature {
+  font-size: 8ch;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.Location {
+  grid-column: 2;
+  grid-row: 2;
 }

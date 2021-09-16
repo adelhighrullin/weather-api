@@ -31,6 +31,7 @@ function App() {
 
   const getResponse = async () => {
     //don't know whether it's correct or not, but i works as i want it to work (:D)
+    //gotta use ErrorBoundary instead
     const response = await fetch(`https://api.weatherapi.com/v1/${mode}.json?key=${API_KEY}&q=${query}&aqi=${aqi}`);
     setResponseCode(response.ok);
     if (response.ok) {
